@@ -5,9 +5,11 @@ import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import barbersRoute from "./routes/barbers.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 const app = express();
 dotenv.config();
+app.use(cors());
 
 const connect = async () => {
   try {
